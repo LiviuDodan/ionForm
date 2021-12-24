@@ -1,20 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+<ion-content>
+  <ion-header [translucent]="true">
+    <ion-toolbar class="ion-text-center">
+      <ion-title>
+        LOGIN
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-content [fullscreen]="true">
+
+    <form [formGroup]="loginForm">
+      <ion-grid>
+        <ion-row class="ion-margin">
+          <!-- form -->
+          <ion-col class="ion-text-center">
+              <h2>CREATE ACCOUNT</h2><br/>
+              <ion-item class="ion-text-center">
+                <ion-label>EMAIL OR USER NAME</ion-label>
+                <ion-input type="text" formControlName="user" placeholder="Enter user name or email"></ion-input>
+              </ion-item><br/>
+              <ion-item class="ion-text-center">
+                <ion-label>PASSWORD</ion-label>
+                <ion-input type="password" formControlName="password" placeholder="Enter password"></ion-input>
+              </ion-item>
+              <br/>
+              <ion-button color="primary" (click)="redirect()" [disabled]="!loginForm.valid" shape="round">LOGIN</ion-button>
+          </ion-col>
+          <!-- image -->
+          <ion-col>
+            <ion-img src="assets/images/descarga.jpg"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>
 </ion-content>

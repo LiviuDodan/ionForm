@@ -1,0 +1,41 @@
+
+<ion-split-pane contentId="main">
+  <!--  the side menu  -->
+  <ion-menu contentId="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          elem 1
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          elem 2
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          elem 3
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          elem 4
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-menu>
+
+  <!-- the main content -->
+  <ion-router-outlet id="main">
+    <ion-button color="primary">Launch pop-up</ion-button>
+  </ion-router-outlet>
+</ion-split-pane>

@@ -7,6 +7,14 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'data-home',
+    loadChildren: () => import('./data-home/data-home.module').then(m => m.DataHomeModules)
+  },
+  {
+    path: 'pop-up',
+    loadChildren:() => import('./pop-up/pop-up.module').then(m => m.PopUpModules)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
