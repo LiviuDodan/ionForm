@@ -8,27 +8,9 @@
         </ion-toolbar>
       </ion-header>
       <ion-grid>
-        <ion-row>
+        <ion-row *ngFor="let element of ['element 1','element 2','element 3','element 4','element 5']">
           <ion-col class="ion-margin">
-            element 1
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col class="ion-margin">
-            element 2
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col class="ion-margin">
-            element 3
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col class="ion-margin">
-            element 4
+            {{element|uppercasePipe}}
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -36,7 +18,7 @@
 
     <!-- the main content -->
     <ion-router-outlet id="main">
-      <ion-button color="primary" (click)="test()">Launch pop-up</ion-button>
+      <ion-button color="primary" (click)="launchPopUp()">Launch pop-up</ion-button>
     </ion-router-outlet>
   </ion-split-pane>
 </ion-content>

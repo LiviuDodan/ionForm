@@ -11,15 +11,26 @@ import { Router } from '@angular/router';
 export class HomePage implements OnInit{
 
   public loginForm: FormGroup;
-
   constructor(private router: Router) {}
 
   ngOnInit() {
     this.loginForm=this.loginGroup({user: '', password: ''});
+
+
   }
 
   redirect(){
+    // console.log(this.loginForm.value.user);
+    this.getRole();
     this.router.navigate(['/data-home']);
+  }
+
+  public getRole(){
+    if (this.loginForm.value.password==='admin' && this.loginForm.value.user==='admin'){
+      localStorage.setItem('role','admin');
+    } else {
+      localStorage.setItem('role','user');
+    }
   }
 
   loginGroup(login: Login){

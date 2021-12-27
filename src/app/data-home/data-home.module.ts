@@ -1,11 +1,10 @@
+import { UppercasePipePipe } from './../pipes/uppercase-pipe.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { DataHomeComponent } from './data-home.component';
 import { DataHomeRoutingModule } from './data-home-routing.module';
 import {MatDialogModule} from '@angular/material/dialog';
-
-
 
 @NgModule({
   imports: [
@@ -14,6 +13,6 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule,
     DataHomeRoutingModule
   ],
-  declarations: [DataHomeComponent]
+  declarations: [DataHomeComponent, UppercasePipePipe]
 })
 export class DataHomeModules { }
