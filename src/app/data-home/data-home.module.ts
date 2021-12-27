@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { DataHomeComponent } from './data-home.component';
 import { DataHomeRoutingModule } from './data-home-routing.module';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -10,6 +11,7 @@ import { DataHomeRoutingModule } from './data-home-routing.module';
   imports: [
     CommonModule,
     IonicModule,
+    MatDialogModule,
     DataHomeRoutingModule
   ],
   declarations: [DataHomeComponent]

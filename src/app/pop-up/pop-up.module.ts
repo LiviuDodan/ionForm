@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { PopUpComponent } from './pop-up.component';
 import { PopUpRoutingModule } from './pop-up-routing.module';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -10,6 +11,7 @@ import { PopUpRoutingModule } from './pop-up-routing.module';
   imports: [
     CommonModule,
     IonicModule,
+    MatDialogModule,
     PopUpRoutingModule
   ],
   declarations: [PopUpComponent]
