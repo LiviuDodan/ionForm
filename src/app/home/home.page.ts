@@ -28,8 +28,10 @@ export class HomePage implements OnInit{
   public setRole(){
     if (this.loginForm.value.password === 'admin' && this.loginForm.value.user === 'admin'){
       localStorage.setItem('role','admin');
-    } else {
+    } else if (this.loginForm.value.password === 'user' && this.loginForm.value.user === 'user') {
       localStorage.setItem('role','user');
+    } else {
+      localStorage.setItem('role','guest');
     }
   }
 
