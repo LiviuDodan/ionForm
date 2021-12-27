@@ -6,9 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MasterGuard implements CanActivate {
-  canActivate(){
 
-    if (localStorage.getItem('role')==='admin'){
+  canActivate(){
+    if (localStorage.getItem('role') === 'admin'){
       return true;
     } else {
       return false;

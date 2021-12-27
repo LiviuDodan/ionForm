@@ -21,12 +21,12 @@ export class HomePage implements OnInit{
 
   redirect(){
     // console.log(this.loginForm.value.user);
-    this.getRole();
+    this.setRole();
     this.router.navigate(['/data-home']);
   }
 
-  public getRole(){
-    if (this.loginForm.value.password==='admin' && this.loginForm.value.user==='admin'){
+  public setRole(){
+    if (this.loginForm.value.password === 'admin' && this.loginForm.value.user === 'admin'){
       localStorage.setItem('role','admin');
     } else {
       localStorage.setItem('role','user');

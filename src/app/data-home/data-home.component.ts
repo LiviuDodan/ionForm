@@ -18,7 +18,7 @@ export class DataHomeComponent implements OnInit {
       const popup=this.dialog.open(PopUpComponent);
 
       popup.afterClosed().subscribe(data => {
-        console.log('sa');
+        console.log('closed');
       });
     }
 }
